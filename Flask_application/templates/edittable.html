@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Row</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+        }
+
+        .container > h1{
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ table_name }}</h1>
+        <form method="post" action="">  
+            {% for column_name, value in dic.items() %}
+                <div class="form-group">
+                    <label for="{{ column_name }}">{{ column_name }}:</label>
+                    <input type="text" class="form-control" id="{{ column_name }}" name="{{ column_name }}" value="{{ value }}">
+                </div>
+            {% endfor %}
+            <!-- <button type="submit" class="btn btn-primary" name="submit">Submit</button> -->
+        </form>
+    </div>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

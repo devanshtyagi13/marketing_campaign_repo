@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer ID Selection</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Select Customer ID</h1>
+        <form action="/details" method="POST">
+            <div class="form-group">
+                <label for="customer_id">Select or enter customer ID:</label>
+                <div class="input-group">
+                    <input type="text" id="customer_id" name="customer_id" class="form-control" placeholder="Type or select customer ID" list="customer_ids" required>
+                    <datalist id="customer_ids">
+                        {% for id in customer_ids %}
+                        <option value="{{ id }}">
+                        {% endfor %}
+                    </datalist>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
