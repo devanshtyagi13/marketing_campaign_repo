@@ -74,10 +74,10 @@ A web application was built using Flask to:
 - View and delete each row
  
 ## AWS Deployment
-The Flask application was deployed on AWS using the AWS Cloud9 service. Cloud9 is a cloud-based integrated development environment (IDE) that allows you to write, run, and debug code with just a browser.
+The Flask application was deployed on AWS using the AWS Cloud9 service and databse is deployed on oracle RDS. Cloud9 is a cloud-based integrated development environment (IDE) that allows you to write, run, and debug code with just a browser.
+And RDS is a cloud based integrated database AWS service.
  
 ## Conclusion
 This project provided valuable insights into customer behavior and identified strategies for business improvement. The development of a Flask application and a Power BI dashboard facilitated effective data visualization and decision-making support.
  
-## Thank You
-If you have any questions, feel free to ask.
+
